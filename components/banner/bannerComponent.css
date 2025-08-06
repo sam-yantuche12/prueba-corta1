@@ -1,0 +1,35 @@
+.div-banner{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../fonts/banner1.png');
+    background-size: cover;
+    background-position: top;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    justify-content: center;
+}
+
+
+.div-banner span{
+    grid-row: 2/3;
+    color: white;
+    font-size: 8rem;
+    font-weight: 900;
+    font-family: monospace;
+}
+
+.div-banner .div-boton  {
+    text-decoration: none;
+    grid-row: 3/4;
+    color: white;
+    height: 5rem;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+}

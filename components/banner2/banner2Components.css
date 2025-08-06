@@ -1,0 +1,33 @@
+.div-banner2 {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-image 0.8s ease-in-out;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.div-banner2 span {
+    margin-bottom: 20px;
+}
+
+.div-boton {
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.div-boton:hover {
+    background-color: #cc5200;
+}
