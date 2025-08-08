@@ -1,142 +1,172 @@
-.busqueda-container {
+.login-container {
   width: 100%;
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
-  background-color: #df8bdf;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-
-.busqueda-top {
-  width: 100%;
-  height: 500px;
+/* Parte superior morada - ahora 50% */
+.login-top {
+  flex: 0 80 90%; /* Exactamente 50% del alto */
   background: linear-gradient(to bottom right, #6342EB, #671d85);
+  display: flex;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen de la señora (ajustada para 50% de altura) */
+.login-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%; /* Ancho de la imagen */
+  height: 100%; /* Altura relativa al contenedor */
   background-image: url('../../fonts/Fashion\ \(1\).png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left bottom;
   background-size: contain;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  color: rgb(122, 91, 131);
-  padding-bottom: 2rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+}
+
+/* Contenido de texto ajustado */
+.welcome-content {
+  margin-left: auto;
+  width: 45%;
+  padding-right: 5%;
   position: relative;
-  text-align: center;
+  margin-top: auto; /* Alineado abajo */
+  padding-bottom: 2rem; /* Menos padding para 50% de altura */
 }
 
-.busqueda-top h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.busqueda-top p {
-  font-size: 1rem;
-  max-width: 300px;
-  line-height: 1.4;
-}
-
-
-.busqueda-bottom {
-  width: 100%;
-  max-width: 800px;
-  background: white;
-  padding: 5rem;
-  border-radius: 1em;
-  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.1);
-}
-
-
-.back-btn {
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: #6342EB;
+/* Ajustes de texto para espacio reducido */
+.welcome-title {
+  font-size: 2.2rem; /* Un poco más pequeño */
   margin-bottom: 1rem;
-  cursor: pointer;
 }
 
-/* Formulario */
+.welcome-text {
+  font-size: 1rem; /* Un poco más pequeño */
+  margin-bottom: 1.5rem;
+}
+
+/* Parte inferior blanca - exactamente 50% */
+.login-bottom {
+  flex: 0 0 50%; /* 50% restante */
+  background: white;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem 4rem; /* Más padding abajo */
+}
+
+/* Tarjeta de formulario sin margen negativo */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 0;
+  margin-top: 0; /* Eliminamos el solapamiento */
+}
+
+/* Resto de estilos del formulario (se mantienen igual que antes) */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 100%;
 }
 
-label {
+.input-group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
   font-weight: bold;
-  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
   color: #333;
+  font-size: 0.9rem;
 }
 
-.input-icon {
-  display: flex;
-  align-items: center;
-  background: #f4f4f4;
-  padding: 0.8rem 1rem;
+.input-field {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
   border-radius: 10px;
   border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
 }
 
-.input-icon input {
-  border: none;
+/* ... (mantén el resto de estilos del formulario igual) ... */
+
+.input-field:focus {
   outline: none;
-  background: transparent;
-  margin-left: 0.5rem;
-  font-size: 1rem;
-  flex: 1;
+  border-color: #6342EB;
+  box-shadow: 0 0 0 2px rgba(99, 66, 235, 0.2);
 }
 
 .options {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.85rem;
-  color: #555;
-  margin-top: 0.5rem;
+  margin: 1.5rem 0;
 }
 
-.options input{
-  margin-right: 0.3rem;
+.remember-me {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.remember-me input {
+  margin-right: 0.5rem;
+  accent-color: #6342EB;
 }
 
 .forgot-pass {
   color: #6342EB;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .forgot-pass:hover {
   text-decoration: underline;
 }
 
-.btn-login-big {
+.btn-login {
+  width: 100%;
   background-color: #6342EB;
   color: white;
-  padding: 1rem;
+  padding: 1.1rem;
   border: none;
-  border-radius: 30px;
+  border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 1rem;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.btn-login-big:hover {
-  background-color: #4021c5;
+.btn-login:hover {
+  background-color: #4a2bc4;
 }
 
-.footer-text {
-  text-align: center;
+.register-text {
+  margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: #333;
-  margin-top: 1rem;
+  color: #666;
+  text-align: center;
 }
 
-.footer-text a {
+.register-text a {
   color: #6342EB;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-text a:hover {
   text-decoration: underline;
 }

@@ -1,88 +1,94 @@
 export function busquedaComponent() {
   const container = document.createElement('div');
-  container.className = "busqueda-container";
+  container.className = "login-container";
 
-  // Parte superior con la imagen
+  // Parte superior morada
   const topDiv = document.createElement('div');
-  topDiv.className = "busqueda-top";
+  topDiv.className = "login-top";
   container.appendChild(topDiv);
 
-  // Parte inferior con el contenido
-  const bottomDiv = document.createElement('div');
-  bottomDiv.className = "busqueda-bottom";
+  // Imagen de fondo
+  const imageDiv = document.createElement('div');
+  imageDiv.className = "login-image";
+  topDiv.appendChild(imageDiv);
 
-  // Flecha atrás
-  const backBtn = document.createElement('button');
-  backBtn.className = 'back-btn';
-  backBtn.textContent = '←';
-  bottomDiv.appendChild(backBtn);
+  // Contenido de bienvenida
+  const welcomeDiv = document.createElement('div');
+  welcomeDiv.className = "welcome-content";
+  topDiv.appendChild(welcomeDiv);
 
-  const welcomeTitle = document.createElement('h2');
-  welcomeTitle.textContent = 'Welcome Back!';
-  topDiv.appendChild(welcomeTitle);
+  const welcomeTitle = document.createElement('h1');
+  welcomeTitle.className = "welcome-title";
+  welcomeTitle.innerHTML = "Welcome<br>Back!";
+  welcomeDiv.appendChild(welcomeTitle);
 
   const welcomeText = document.createElement('p');
-  welcomeText.textContent = "Yay! You're back! Thanks for shopping with us. We have exciting deals and promotions going on!";
-  topDiv.appendChild(welcomeText);
-  // Welcome
+  welcomeText.className = "welcome-text";
+  welcomeText.textContent = "You? You're back! Thanks for shopping with us. We have excited deals and promotions going on, grab your pick now!";
+  welcomeDiv.appendChild(welcomeText);
 
-  const loginBtn = document.createElement('button');
-  loginBtn.className = 'btn-login';
-  loginBtn.textContent = 'LOG IN';
-  topDiv.appendChild(welcomeText);
+  // Parte inferior blanca
+  const bottomDiv = document.createElement('div');
+  bottomDiv.className = "login-bottom";
+  container.appendChild(bottomDiv);
+
+  const card = document.createElement('div');
+  card.className = "login-card";
+  bottomDiv.appendChild(card);
 
   // FORMULARIO
   const form = document.createElement('form');
   form.className = 'login-form';
 
+  // Grupo de email
+  const emailGroup = document.createElement('div');
+  emailGroup.className = 'input-group';
+  
   const emailLabel = document.createElement('label');
   emailLabel.textContent = 'Email address';
-  form.appendChild(emailLabel);
-
-  const emailInputDiv = document.createElement('div');
-  emailInputDiv.className = 'input-icon';
-
-  const emailIcon = document.createElement('span');
-  emailIcon.className = 'icon-email';
-  emailIcon.textContent = '📧';
-  emailInputDiv.appendChild(emailIcon);
+  emailLabel.htmlFor = 'email';
+  emailGroup.appendChild(emailLabel);
 
   const emailInput = document.createElement('input');
   emailInput.type = 'email';
-  emailInput.placeholder = 'hlo@geeta.co';
+  emailInput.id = 'email';
+  emailInput.className = 'input-field';
+  emailInput.placeholder = 'blog@acta.cq';
   emailInput.required = true;
-  emailInputDiv.appendChild(emailInput);
-  form.appendChild(emailInputDiv);
+  emailGroup.appendChild(emailInput);
+  
+  form.appendChild(emailGroup);
 
+  // Grupo de contraseña
+  const passGroup = document.createElement('div');
+  passGroup.className = 'input-group';
+  
   const passLabel = document.createElement('label');
   passLabel.textContent = 'Password';
-  form.appendChild(passLabel);
-
-  const passInputDiv = document.createElement('div');
-  passInputDiv.className = 'input-icon';
-
-  const passIcon = document.createElement('span');
-  passIcon.className = 'icon-pass';
-  passIcon.textContent = '🔒';
-  passInputDiv.appendChild(passIcon);
+  passLabel.htmlFor = 'password';
+  passGroup.appendChild(passLabel);
 
   const passInput = document.createElement('input');
   passInput.type = 'password';
+  passInput.id = 'password';
+  passInput.className = 'input-field';
   passInput.placeholder = 'Enter your password';
   passInput.required = true;
-  passInputDiv.appendChild(passInput);
-  form.appendChild(passInputDiv);
+  passGroup.appendChild(passInput);
+  
+  form.appendChild(passGroup);
 
+  // Opciones
   const optionsDiv = document.createElement('div');
   optionsDiv.className = 'options';
 
-  const rememberDiv = document.createElement('label');
-  rememberDiv.className = 'remember-me';
+  const rememberLabel = document.createElement('label');
+  rememberLabel.className = 'remember-me';
   const rememberInput = document.createElement('input');
   rememberInput.type = 'checkbox';
-  rememberDiv.appendChild(rememberInput);
-  rememberDiv.appendChild(document.createTextNode('Remember me'));
-  optionsDiv.appendChild(rememberDiv);
+  rememberLabel.appendChild(rememberInput);
+  rememberLabel.appendChild(document.createTextNode('Remember me'));
+  optionsDiv.appendChild(rememberLabel);
 
   const forgotPass = document.createElement('a');
   forgotPass.href = '#';
@@ -92,33 +98,27 @@ export function busquedaComponent() {
 
   form.appendChild(optionsDiv);
 
-  const bigLoginBtn = document.createElement('button');
-  bigLoginBtn.type = 'submit';
-  bigLoginBtn.className = 'btn-login-big';
-  bigLoginBtn.textContent = 'LOG IN';
-  form.appendChild(bigLoginBtn);
+  // Botón de login
+  const loginBtn = document.createElement('button');
+  loginBtn.type = 'submit';
+  loginBtn.className = 'btn-login';
+  loginBtn.textContent = 'LOG IN';
+  form.appendChild(loginBtn);
 
-  bottomDiv.appendChild(form);
+  card.appendChild(form);
 
-  const footerText = document.createElement('p');
-  footerText.className = 'footer-text';
-  footerText.innerHTML = 'Not registered yet? <a href="#">Create an Account</a>';
-  bottomDiv.appendChild(footerText);
+  // Texto de registro
+  const registerText = document.createElement('p');
+  registerText.className = 'register-text';
+  registerText.innerHTML = 'Not registered yet? <a href="#">Create an Account</a>';
+  card.appendChild(registerText);
 
   // Eventos
-  loginBtn.addEventListener('click', () => {
-    alert('Log in clicked!');
-  });
-
-  bigLoginBtn.addEventListener('click', (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Submit login form');
+    // Lógica de autenticación aquí
+    console.log('Formulario enviado');
   });
 
-  backBtn.addEventListener('click', () => {
-    window.history.back();
-  });
-
-  container.appendChild(bottomDiv);
   return container;
 }
