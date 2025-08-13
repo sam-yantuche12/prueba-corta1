@@ -1,74 +1,100 @@
+
 .div-banner2 {
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    gap: 1rem;
     padding: 2rem;
-    width: 100%;
-    min-height: 100vh;
-    background: #f4f4f4 url('../../fonts/banner2.png') no-repeat center center;
-    background-size: cover;
 }
 
-.div-banner2 h2 {
-  font-size: 5rem;
-  text-align: center;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.div-banner2 h2 span {
-  display: inline-block;
-  transform: translateY(-20rem); 
-  color: #6342EB;
-  font-weight: bold;
+.h2 {
+    font-size: 4rem;
+    margin-top: 20%;
+    font-weight: bold;
 }
 
 
-
-.div-banner2 p {
-    font-family: Lato;
-    font-size: 2em;
-    color: #181717;
+.p1 {
+    font-size: 1.8rem;
+    margin-top: 30%;
+    padding: 0 3rem;
+    display: flex;
     text-align: center;
-    margin-bottom: 3rem;
+    justify-content: center;
 }
 
-.div-banner2 .btn-login {
-    background: #111111;
-    background-color: #f4f4f4;
+.p1 b {
+    font-weight: bold; 
+}
+
+.p2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10%;
+    padding: 0 2rem;
+}
+
+.btn-login {
     border: 2px solid black;
-    padding: 1.7rem 6rem;
-    border-radius: 10px;
+    width: 222px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
     align-items: center;
-    margin-bottom: 1.2rem;
+    justify-content: center;
+    margin-top: 20%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-register {
+    color: white;
+    width: 230px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6342E8;
+    margin-top: 5%;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.or-Span {
+    margin-top: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ocultar {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .h2 {
+        font-size: 3rem;
+        margin-top: 15%;
+    }
     
+    .p1 {
+        font-size: 1.5rem;
+        margin-top: 20%;
+    }
     
+    .p2 {
+        font-size: 1rem;
+    }
+    
+    .btn-login,
+    .btn-register {
+        width: 200px;
+        height: 50px;
+    }
 }
-
-.div-banner2 .btn-login:hover {
-    background: #04284e;
-}
-
-/* Texto centrado */
-.busqueda-top h2 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.div-banner2 .btn-register {
-    background: #d354e4;
-    color: #fff;
-    padding: 1.7rem 6rem;
-    border-radius: 40px;
-
-}
-
-.div-banner2 .btn-register:hover {
-    background: #1e7e34;
-}
-

@@ -1,0 +1,103 @@
+.section2 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.columna1 {
+    height: 50%;
+    width: 100%;
+    color: white;
+    padding: 2rem;
+    background-image:
+        url(../../fonts/Fashion.png),
+        url(../../fonts/RectánguloMorado.png);
+    background-size: 30%, cover;
+    background-position: right, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.flecha-Regreso {
+    width: 24px;
+    cursor: pointer;
+}
+
+.titulo {
+    margin-top: 6rem;
+    font-size: 2.5rem;
+}
+
+.texto1 {
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+    line-height: 1.4;
+    width: 90%;
+}
+
+.subtitulo {
+    margin-top: 10rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.columna2 {
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.input-con-icono {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1.2rem;
+
+}
+
+.input-con-icono img {
+    width: 18px;
+    margin-right: 1.7rem;
+}
+
+.input-con-icono input {
+    border: none;
+    outline: none;
+    
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.2rem;
+}
+
+.btn-login {
+    background-color: #7b4dff;
+    color: white;
+    padding: 1.7rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.footer-text a {
+    color: #7b4dff;
+    text-decoration: none;
+}

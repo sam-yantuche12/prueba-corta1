@@ -27,7 +27,6 @@ export function busquedaComponent() {
   welcomeText.textContent = "You? You're back! Thanks for shopping with us. We have excited deals and promotions going on, grab your pick now!";
   welcomeDiv.appendChild(welcomeText);
 
-  // Parte inferior blanca
   const bottomDiv = document.createElement('div');
   bottomDiv.className = "login-bottom";
   container.appendChild(bottomDiv);
@@ -35,12 +34,12 @@ export function busquedaComponent() {
   const card = document.createElement('div');
   card.className = "login-card";
   bottomDiv.appendChild(card);
-
   // FORMULARIO
+
   const form = document.createElement('form');
   form.className = 'login-form';
 
-  // Grupo de email
+  
   const emailGroup = document.createElement('div');
   emailGroup.className = 'input-group';
   
@@ -59,7 +58,7 @@ export function busquedaComponent() {
   
   form.appendChild(emailGroup);
 
-  // Grupo de contraseña
+  
   const passGroup = document.createElement('div');
   passGroup.className = 'input-group';
   

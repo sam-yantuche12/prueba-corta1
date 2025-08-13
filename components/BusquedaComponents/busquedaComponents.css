@@ -6,9 +6,8 @@
   flex-direction: column;
 }
 
-/* Parte superior morada - ahora 50% */
 .login-top {
-  flex: 0 80 90%; /* Exactamente 50% del alto */
+  flex: 0 80 90%; 
   background: linear-gradient(to bottom right, #6342EB, #671d85);
   display: flex;
   padding: 3rem;
@@ -16,58 +15,56 @@
   overflow: hidden;
 }
 
-/* Imagen de la señora (ajustada para 50% de altura) */
+
 .login-image {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 50%; /* Ancho de la imagen */
-  height: 100%; /* Altura relativa al contenedor */
+  width: 50%; 
+  height: 100%; 
   background-image: url('../../fonts/Fashion\ \(1\).png');
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: contain;
 }
 
-/* Contenido de texto ajustado */
+
 .welcome-content {
   margin-left: auto;
   width: 45%;
   padding-right: 5%;
   position: relative;
-  margin-top: auto; /* Alineado abajo */
-  padding-bottom: 2rem; /* Menos padding para 50% de altura */
+  margin-top: auto; 
+  padding-bottom: 2rem;
 }
 
-/* Ajustes de texto para espacio reducido */
+
 .welcome-title {
-  font-size: 2.2rem; /* Un poco más pequeño */
+  font-size: 2.2rem; 
   margin-bottom: 1rem;
 }
 
 .welcome-text {
-  font-size: 1rem; /* Un poco más pequeño */
+  font-size: 1rem; 
   margin-bottom: 1.5rem;
 }
 
-/* Parte inferior blanca - exactamente 50% */
+
 .login-bottom {
-  flex: 0 0 50%; /* 50% restante */
+  flex: 0 0 50%;
   background: white;
   display: flex;
   justify-content: center;
-  padding: 2rem 2rem 4rem; /* Más padding abajo */
+  padding: 2rem 2rem 4rem; 
 }
 
-/* Tarjeta de formulario sin margen negativo */
 .login-card {
   width: 100%;
   max-width: 400px;
   padding: 2rem 0;
-  margin-top: 0; /* Eliminamos el solapamiento */
+  margin-top: 0; 
 }
 
-/* Resto de estilos del formulario (se mantienen igual que antes) */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -98,7 +95,7 @@
   transition: all 0.3s ease;
 }
 
-/* ... (mantén el resto de estilos del formulario igual) ... */
+
 
 .input-field:focus {
   outline: none;
