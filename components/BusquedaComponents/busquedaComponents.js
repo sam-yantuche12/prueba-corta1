@@ -17,9 +17,10 @@ export function busquedaComponent() {
   welcomeDiv.className = "welcome-content";
   topDiv.appendChild(welcomeDiv);
 
+
   const welcomeTitle = document.createElement('h1');
   welcomeTitle.className = "welcome-title";
-  welcomeTitle.innerHTML = "Welcome<br>Back!";
+  welcomeTitle.innerHTML = "Welcome Back!";
   welcomeDiv.appendChild(welcomeTitle);
 
   const welcomeText = document.createElement('p');
@@ -77,7 +78,7 @@ export function busquedaComponent() {
   
   form.appendChild(passGroup);
 
-  // Opciones
+  
   const optionsDiv = document.createElement('div');
   optionsDiv.className = 'options';
 
@@ -90,7 +91,7 @@ export function busquedaComponent() {
   optionsDiv.appendChild(rememberLabel);
 
   const forgotPass = document.createElement('a');
-  forgotPass.href = '#';
+  forgotPass.href = '';
   forgotPass.textContent = 'Forgot Password?';
   forgotPass.className = 'forgot-pass';
   optionsDiv.appendChild(forgotPass);

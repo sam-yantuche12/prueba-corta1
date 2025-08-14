@@ -1,6 +1,6 @@
 .login-container {
-  width: 100%;
-  min-height: 100vh;
+  height: 105vh;
+  width: 90%;
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   flex: 0 80 90%; 
   background: linear-gradient(to bottom right, #6342EB, #671d85);
   display: flex;
-  padding: 3rem;
+  padding: 1%;
   position: relative;
   overflow: hidden;
 }
@@ -18,30 +18,38 @@
 
 .login-image {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50%; 
+  width: 90%; 
   height: 100%; 
   background-image: url('../../fonts/Fashion\ \(1\).png');
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: right bottom;
   background-size: contain;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8rem;
 }
 
 
 .welcome-content {
   margin-left: auto;
-  width: 45%;
-  padding-right: 5%;
+  width: 90%;
+  padding-right: 20%;
   position: relative;
   margin-top: auto; 
-  padding-bottom: 2rem;
+  padding-bottom: 10rem;
+  color: #f9f9f9;
+
 }
 
 
 .welcome-title {
-  font-size: 2.2rem; 
-  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 2rem; 
+  padding-right: 20%;
+  position: relative;
+  margin: auto;
+  padding-bottom: 1rem;
+  color: #f9f9f9;
 }
 
 .welcome-text {
@@ -77,7 +85,8 @@
   margin-bottom: 1.5rem;
 }
 
-.input-group label {
+ 
+.input-group  {
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -85,23 +94,30 @@
   font-size: 0.9rem;
 }
 
+
 .input-field {
   width: 100%;
   padding: 0.9rem 1.2rem;
+  padding-left: 2.5rem; 
   border-radius: 10px;
   border: 1px solid #ddd;
   font-size: 1rem;
   background-color: #f9f9f9;
-  transition: all 0.3s ease;
+  background-image: url('../../fonts/Form/Icons/Lock.png');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 10px center;
+
 }
-
-
 
 .input-field:focus {
   outline: none;
   border-color: #6342EB;
   box-shadow: 0 0 0 2px rgba(99, 66, 235, 0.2);
 }
+
+
+
 
 .options {
   display: flex;

@@ -1,4 +1,4 @@
-export function section2() {
+export function banner2Components() {
 
     let titulo = document.createElement("h2");
     titulo.className = "titulo";

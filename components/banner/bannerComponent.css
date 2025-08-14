@@ -1,6 +1,6 @@
 .div-banner{
-    height: 100vh;
-    width: 100%;
+    height: 99vh;
+    width: 80%;
     background-image: url("../../fonts/banner1.png");
     background-size: cover;
     background-position: top;
